@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Valid Example: Correct Heading Hierarchy</title>
+    <style>
+        /* CSS is now used only for styling, not for conveying structure */
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Styling for the H1 */
+        h1 {
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-bottom: 30px;
+        }
+
+        /* Consistent styling for main sections */
+        h2 {
+            color: #0056b3;
+            margin-top: 25px;
+        }
+
+        /* Consistent styling for sub-sections */
+        h3 {
+            color: #4CAF50;
+            /* Changed to a success color */
+            font-size: 1.3em;
+            margin-top: 15px;
+            border-left: 4px solid #4CAF50;
+            padding-left: 10px;
+        }
+    </style>
+    <style>
+        [ally-id]::before {
+            content: attr(ally-id);
+            position: absolute;
+            background: #ff6b6b;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            z-index: 10000;
+            margin-left: -60px;
+            margin-top: -2px;
+            font-family: monospace;
+        }
+
+        [ally-id] {
+            position: relative;
+            border: 1px dashed rgba(255, 107, 107, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-content" ally-id="a11y-1">
+        <h1 ally-id="a11y-2">✅ WCAG Valid Page: Correct Heading Hierarchy</h1>
+        <p ally-id="a11y-3">This page now uses only the standard HTML heading tags (`
+        </p>
+        <h1 ally-id="a11y-4">`, `</h1>
+        <h2 ally-id="a11y-5">`, and `</h2>
+        <h3 ally-id="a11y-6">`) in a correct, sequential order, making the structure fully accessible and navigable
+            by screen readers.<p ally-id="a11y-7"></p>
+
+        </h3>
+        <h2 ally-id="a11y-8">Part I: Core Concepts and Architecture (10 Headings)</h2>
+
+        <h3 ally-id="a11y-9">Introduction to Concepts</h3>
+        <p ally-id="a11y-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+            ut
+            labore et dolore magna aliqua.</p>
+
+        <h3 ally-id="a11y-11">Data Abstraction Layer</h3>
+        <p ally-id="a11y-12">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat.</p>
+
+        <h3 ally-id="a11y-13">User Interface Components</h3>
+        <p ally-id="a11y-14">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla
+            pariatur.</p>
+
+        <h3 ally-id="a11y-15">Server-Side Processing</h3>
+        <p ally-id="a11y-16">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id
+            est laborum.</p>
+
+        <h3 ally-id="a11y-17">Database Connection Pooling</h3>
+        <p ally-id="a11y-18">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+            velit.</p>
+
+        <h3 ally-id="a11y-19">Asynchronous Operations</h3>
+        <p ally-id="a11y-20">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium.
+        </p>
+
+        <h3 ally-id="a11y-21">Frontend Framework Selection</h3>
+        <p ally-id="a11y-22">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+            vitae
+            dicta sunt explicabo.</p>
+
+        <h3 ally-id="a11y-23">Backend API Design</h3>
+        <p ally-id="a11y-24">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur
+            magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+        <h3 ally-id="a11y-25">Security Protocols Review</h3>
+        <p ally-id="a11y-26">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+        <h3 ally-id="a11y-27">Performance Optimization Checklist</h3>
+        <p ally-id="a11y-28">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <hr ally-id="a11y-29">
+
+        <h2 ally-id="a11y-30">Part II: Project Management and Deployment (10 Headings)</h2>
+
+        <h3 ally-id="a11y-31">Deployment Strategy</h3>
+        <p ally-id="a11y-32">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla
+            pariatur.</p>
+
+        <h3 ally-id="a11y-33">Continuous Integration</h3>
+        <p ally-id="a11y-34">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id
+            est laborum.</p>
+
+        <h3 ally-id="a11y-35">Project Documentation</h3>
+        <p ally-id="a11y-36">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+            velit.</p>
+
+        <h3 ally-id="a11y-37">Client Requirements Analysis</h3>
+        <p ally-id="a11y-38">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium.
+        </p>
+
+        <h3 ally-id="a11y-39">Wireframing and Prototyping</h3>
+        <p ally-id="a11y-40">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+            vitae
+            dicta sunt explicabo.</p>
+
+        <h3 ally-id="a11y-41">Initial Code Structure</h3>
+        <p ally-id="a11y-42">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur
+            magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+        <h3 ally-id="a11y-43">Module Dependencies</h3>
+        <p ally-id="a11y-44">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+        <h3 ally-id="a11y-45">Error Handling Implementation</h3>
+        <p ally-id="a11y-46">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <h3 ally-id="a11y-47">Third-Party Integrations</h3>
+        <p ally-id="a11y-48">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla
+            pariatur.</p>
+
+        <h3 ally-id="a11y-49">Unit Testing Coverage</h3>
+        <p ally-id="a11y-50">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id
+            est laborum.</p>
+
+        <hr ally-id="a11y-51">
+
+        <h2 ally-id="a11y-52">Part III: Operations and Finalization (10 Headings)</h2>
+
+        <h3 ally-id="a11y-53">Accessibility Audit Planning</h3>
+        <p ally-id="a11y-54">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+            velit.</p>
+
+        <h3 ally-id="a11y-55">Content Management System Setup</h3>
+        <p ally-id="a11y-56">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium.
+        </p>
+
+        <h3 ally-id="a11y-57">Data Migration Process</h3>
+        <p ally-id="a11y-58">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+            vitae
+            dicta sunt explicabo.</p>
+
+        <h3 ally-id="a11y-59">Cloud Hosting Environment</h3>
+        <p ally-id="a11y-60">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur
+            magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+        <h3 ally-id="a11y-61">Load Balancing Strategies</h3>
+        <p ally-id="a11y-62">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+        <h3 ally-id="a11y-63">Firewall Configuration</h3>
+        <p ally-id="a11y-64">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <h3 ally-id="a11y-65">Disaster Recovery Plan</h3>
+        <p ally-id="a11y-66">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla
+            pariatur.</p>
+
+        <h3 ally-id="a11y-67">Monitoring and Alerting</h3>
+        <p ally-id="a11y-68">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id
+            est laborum.</p>
+
+        <h3 ally-id="a11y-69">Maintenance Window Scheduling</h3>
+        <p ally-id="a11y-70">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+            velit.</p>
+
+        <h3 ally-id="a11y-71">Final Review and Launch</h3>
+        <p ally-id="a11y-72">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium.
+        </p>
+
+        <hr ally-id="a11y-73">
+
+        <h2 ally-id="a11y-74">Part IV: Corrected Sections (Based on Original Invalid Headings)</h2>
+
+        <h3 ally-id="a11y-75">Invalid Section 1: Introduction</h3>
+        <p ally-id="a11y-76">Content for the main introduction.</p>
+
+        <h3 ally-id="a11y-77">The Deep Dive (Corrected from H4)</h3>
+        <p ally-id="a11y-78">Detailed content that is now correctly under an H3.</p>
+
+        <h4 ally-id="a11y-79">A Minor Sub-point (If an H4 is absolutely needed, it follows H3)</h4>
+        <p ally-id="a11y-80">Very specific content.</p>
+
+        <h3 ally-id="a11y-81">Invalid Section 2: Methodology</h3>
+        <p ally-id="a11y-82">Content on the methodology used.</p>
+
+        <h3 ally-id="a11y-83">Phase One Execution (Corrected from H4)</h3>
+        <p ally-id="a11y-84">Details on the first phase.</p>
+
+        <h3 ally-id="a11y-85">Invalid Section 3: Results Overview</h3>
+        <p ally-id="a11y-86">Summary of the main findings.</p>
+
+        <h3 ally-id="a11y-87">Key Finding A (Corrected from H4)</h3>
+        <p ally-id="a11y-88">Content for Key Finding A.</p>
+
+        <h3 ally-id="a11y-89">Invalid Section 4: Discussion and Analysis</h3>
+        <p ally-id="a11y-90">Analysis of the results.</p>
+
+        <h3 ally-id="a11y-91">Implications for Future Work (Corrected from H4)</h3>
+        <p ally-id="a11y-92">Future work content.</p>
+
+        <h3 ally-id="a11y-93">Invalid Section 5: Conclusion Summary</h3>
+        <p ally-id="a11y-94">Final summary.</p>
+
+        <h3 ally-id="a11y-95">Final Thoughts (Corrected from H4)</h3>
+        <p ally-id="a11y-96">Closing remarks.</p>
+    </div>
+</body>
+</html>
