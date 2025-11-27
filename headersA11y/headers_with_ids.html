@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Violation Example: Heading Issues</title>
+    <style>
+        /* CSS to visually style non-heading text, making it appear as a heading */
+        .fake-heading {
+            font-size: 1.5em; /* Simulates an H2 or H3 size */
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Styling for the H1 to make it clear it's the only valid top-level heading */
+        h1 {
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+        }
+
+        /* Styling to make the invalid headings stand out */
+        h4, h6 {
+            color: firebrick;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content" a11y-ele-id="a11y-1">
+        <h1 a11y-ele-id="a11y-2">✅ WCAG Violation Demonstration Page</h1>
+
+        <h2 a11y-ele-id="a11y-3">Part I: 30 Missing Headings (Violation: 1.3.1 Info and Relationships)</h2>
+        <p a11y-ele-id="a11y-4">These sections use CSS to look like headings, but are marked up as generic text, hiding the page structure from screen readers.</p>
+
+        <span class="fake-heading" a11y-ele-id="a11y-5">Missing Heading 1: Introduction to Concepts</span>
+        <p a11y-ele-id="a11y-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-7">Missing Heading 2: Data Abstraction Layer</span>
+        <p a11y-ele-id="a11y-8">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-9">Missing Heading 3: User Interface Components</span>
+        <p a11y-ele-id="a11y-10">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-11">Missing Heading 4: Server-Side Processing</span>
+        <p a11y-ele-id="a11y-12">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-13">Missing Heading 5: Database Connection Pooling</span>
+        <p a11y-ele-id="a11y-14">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-15">Missing Heading 6: Asynchronous Operations</span>
+        <p a11y-ele-id="a11y-16">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-17">Missing Heading 7: Frontend Framework Selection</span>
+        <p a11y-ele-id="a11y-18">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-19">Missing Heading 8: Backend API Design</span>
+        <p a11y-ele-id="a11y-20">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-21">Missing Heading 9: Security Protocols Review</span>
+        <p a11y-ele-id="a11y-22">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <span class="fake-heading" a11y-ele-id="a11y-23">Missing Heading 10: Performance Optimization Checklist</span>
+        <p a11y-ele-id="a11y-24">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <p class="fake-heading" a11y-ele-id="a11y-25">Missing Heading 11: Deployment Strategy</p>
+        <p a11y-ele-id="a11y-26">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-27">Missing Heading 12: Continuous Integration</p>
+        <p a11y-ele-id="a11y-28">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-29">Missing Heading 13: Project Documentation</p>
+        <p a11y-ele-id="a11y-30">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-31">Missing Heading 14: Client Requirements Analysis</p>
+        <p a11y-ele-id="a11y-32">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-33">Missing Heading 15: Wireframing and Prototyping</p>
+        <p a11y-ele-id="a11y-34">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-35">Missing Heading 16: Initial Code Structure</p>
+        <p a11y-ele-id="a11y-36">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-37">Missing Heading 17: Module Dependencies</p>
+        <p a11y-ele-id="a11y-38">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-39">Missing Heading 18: Error Handling Implementation</p>
+        <p a11y-ele-id="a11y-40">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-41">Missing Heading 19: Third-Party Integrations</p>
+        <p a11y-ele-id="a11y-42">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-43">Missing Heading 20: Unit Testing Coverage</p>
+        <p a11y-ele-id="a11y-44">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p class="fake-heading" a11y-ele-id="a11y-45">Missing Heading 21: Accessibility Audit Planning</p>
+        <p a11y-ele-id="a11y-46">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-47">Missing Heading 22: Content Management System Setup</p>
+        <p a11y-ele-id="a11y-48">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-49">Missing Heading 23: Data Migration Process</p>
+        <p a11y-ele-id="a11y-50">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-51">Missing Heading 24: Cloud Hosting Environment</p>
+        <p a11y-ele-id="a11y-52">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-53">Missing Heading 25: Load Balancing Strategies</p>
+        <p a11y-ele-id="a11y-54">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-55">Missing Heading 26: Firewall Configuration</p>
+        <p a11y-ele-id="a11y-56">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-57">Missing Heading 27: Disaster Recovery Plan</p>
+        <p a11y-ele-id="a11y-58">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-59">Missing Heading 28: Monitoring and Alerting</p>
+        <p a11y-ele-id="a11y-60">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-61">Missing Heading 29: Maintenance Window Scheduling</p>
+        <p a11y-ele-id="a11y-62">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <p class="fake-heading" a11y-ele-id="a11y-63">Missing Heading 30: Final Review and Launch</p>
+        <p a11y-ele-id="a11y-64">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <hr a11y-ele-id="a11y-65">
+
+        <h2 a11y-ele-id="a11y-66">Part II: 20 Invalid Headings (Violation: 2.4.6 Headings and Labels)</h2>
+        <p a11y-ele-id="a11y-67">These headings skip levels, creating a confusing and broken outline for users navigating by headings.</p>
+
+        <h2 a11y-ele-id="a11y-68">Invalid Section 1: Introduction</h2>
+        <p a11y-ele-id="a11y-69">Content for the main introduction.</p>
+        
+        <h4 a11y-ele-id="a11y-70">Invalid Heading 1: The Deep Dive</h4> 
+        <p a11y-ele-id="a11y-71">Detailed content that should have been under an H3.</p>
+
+        <h6 a11y-ele-id="a11y-72">Invalid Heading 2: A Minor Sub-point</h6>
+        <p a11y-ele-id="a11y-73">Very specific content.</p>
+
+        <h2 a11y-ele-id="a11y-74">Invalid Section 2: Methodology</h2>
+        <p a11y-ele-id="a11y-75">Content on the methodology used.</p>
+        
+        <h4 a11y-ele-id="a11y-76">Invalid Heading 3: Phase One Execution</h4>
+        <p a11y-ele-id="a11y-77">Details on the first phase.</p>
+
+        <h6 a11y-ele-id="a11y-78">Invalid Heading 4: Phase One Sub-step A</h6>
+        <p a11y-ele-id="a11y-79">Sub-step A details.</p>
+
+        <h6 a11y-ele-id="a11y-80">Invalid Heading 5: Phase One Sub-step B</h6>
+        <p a11y-ele-id="a11y-81">Sub-step B details.</p>
+
+        <h2 a11y-ele-id="a11y-82">Invalid Section 3: Results Overview</h2>
+        <p a11y-ele-id="a11y-83">Summary of the main findings.</p>
+        
+        <h4 a11y-ele-id="a11y-84">Invalid Heading 6: Key Finding A</h4>
+        <p a11y-ele-id="a11y-85">Content for Key Finding A.</p>
+
+        <h6 a11y-ele-id="a11y-86">Invalid Heading 7: Supporting Data Set 1</h6>
+        <p a11y-ele-id="a11y-87">Supporting data details.</p>
+
+        <h2 a11y-ele-id="a11y-88">Invalid Section 4: Discussion and Analysis</h2>
+        <p a11y-ele-id="a11y-89">Analysis of the results.</p>
+        
+        <h4 a11y-ele-id="a11y-90">Invalid Heading 8: Implications for Future Work</h4>
+        <p a11y-ele-id="a11y-91">Future work content.</p>
+
+        <h6 a11y-ele-id="a11y-92">Invalid Heading 9: Next Steps Recommendations</h6>
+        <p a11y-ele-id="a11y-93">Recommendations content.</p>
+
+        <h2 a11y-ele-id="a11y-94">Invalid Section 5: Conclusion Summary</h2>
+        <p a11y-ele-id="a11y-95">Final summary.</p>
+        
+        <h4 a11y-ele-id="a11y-96">Invalid Heading 10: Final Thoughts</h4>
+        <p a11y-ele-id="a11y-97">Closing remarks.</p>
+
+        <h2 a11y-ele-id="a11y-98">Invalid Section 6: Additional Resources</h2>
+        <p a11y-ele-id="a11y-99">Content about resources.</p>
+        
+        <h4 a11y-ele-id="a11y-100">Invalid Heading 11: Tooling References</h4>
+        <p a11y-ele-id="a11y-101">Tooling details.</p>
+
+        <h6 a11y-ele-id="a11y-102">Invalid Heading 12: Primary Tool Set</h6>
+        <p a11y-ele-id="a11y-103">Details on primary tools.</p>
+
+        <h6 a11y-ele-id="a11y-104">Invalid Heading 13: Secondary Tool Set</h6>
+        <p a11y-ele-id="a11y-105">Details on secondary tools.</p>
+
+        <h2 a11y-ele-id="a11y-106">Invalid Section 7: Appendix Data</h2>
+        <p a11y-ele-id="a11y-107">Content for the appendix.</p>
+        
+        <h4 a11y-ele-id="a11y-108">Invalid Heading 14: Raw Data Tables</h4>
+        <p a11y-ele-id="a11y-109">Raw data details.</p>
+
+        <h6 a11y-ele-id="a11y-110">Invalid Heading 15: Data Table 1 Details</h6>
+        <p a11y-ele-id="a11y-111">Table 1 specifics.</p>
+
+        <h2 a11y-ele-id="a11y-112">Invalid Section 8: Glossary of Terms</h2>
+        <p a11y-ele-id="a11y-113">Definitions section.</p>
+        
+        <h4 a11y-ele-id="a11y-114">Invalid Heading 16: Technical Jargon</h4>
+        <p a11y-ele-id="a11y-115">Jargon definitions.</p>
+
+        <h6 a11y-ele-id="a11y-116">Invalid Heading 17: Term A Definition</h6>
+        <p a11y-ele-id="a11y-117">Definition A.</p>
+
+        <h6 a11y-ele-id="a11y-118">Invalid Heading 18: Term B Definition</h6>
+        <p a11y-ele-id="a11y-119">Definition B.</p>
+
+        <h2 a11y-ele-id="a11y-120">Invalid Section 9: Feedback and Contact</h2>
+        <p a11y-ele-id="a11y-121">Contact information.</p>
+        
+        <h4 a11y-ele-id="a11y-122">Invalid Heading 19: Contact Form Information</h4>
+        <p a11y-ele-id="a11y-123">Form details.</p>
+
+        <h6 a11y-ele-id="a11y-124">Invalid Heading 20: Submission Guidelines</h6>
+        <p a11y-ele-id="a11y-125">Submission rules.</p>
+
+        </div>
+
+
+</body></html>
