@@ -32,7 +32,26 @@
             color: firebrick;
         }
     </style>
-</head>
+<style>
+    [ally-id]::before {
+      content: attr(ally-id);
+      position: absolute;
+      background: #ff6b6b;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: bold;
+      z-index: 10000;
+      margin-left: -60px;
+      margin-top: -2px;
+      font-family: monospace;
+    }
+    [ally-id] {
+      position: relative;
+      border: 1px dashed rgba(255, 107, 107, 0.3);
+    }
+  </style></head>
 <body>
 
     <div class="main-content" ally-id="a11y-1">
@@ -194,8 +213,5 @@
 
         <h6 ally-id="a11y-124">Invalid Heading 20: Submission Guidelines</h6>
         <p ally-id="a11y-125">Submission rules.</p>
-
         </div>
-
-
 </body></html>
