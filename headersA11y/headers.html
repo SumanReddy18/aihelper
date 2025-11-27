@@ -5,8 +5,7 @@
     <style>
         /* CSS to visually style non-heading text, making it appear as a heading */
         .fake-heading {
-            font-size: 1.5em;
-            /* Simulates an H2 or H3 size */
+            font-size: 1.5em; /* Simulates an H2 or H3 size */
             font-weight: bold;
             color: #333;
             margin-top: 20px;
@@ -14,7 +13,7 @@
             padding-bottom: 5px;
             border-bottom: 2px solid #ddd;
         }
-
+        
         .main-content {
             max-width: 800px;
             margin: 0 auto;
@@ -29,62 +28,35 @@
         }
 
         /* Styling to make the invalid headings stand out */
-        h4,
-        h6 {
+        h4, h6 {
             color: firebrick;
         }
     </style>
-<style>
-    [ally-id]::before {
-      content: attr(ally-id);
-      position: absolute;
-      background: #ff6b6b;
-      color: white;
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-weight: bold;
-      z-index: 10000;
-      margin-left: -60px;
-      margin-top: -2px;
-      font-family: monospace;
-    }
-    [ally-id] {
-      position: relative;
-      border: 1px dashed rgba(255, 107, 107, 0.3);
-    }
-  </style></head>
-
+</head>
 <body>
 
     <div class="main-content" ally-id="a11y-1">
         <h1 ally-id="a11y-2">✅ WCAG Violation Demonstration Page</h1>
 
         <h2 ally-id="a11y-3">Part I: 30 Missing Headings (Violation: 1.3.1 Info and Relationships)</h2>
-        <p ally-id="a11y-4">These sections use CSS to look like headings, but are marked up as generic text, hiding the page structure
-            from screen readers.</p>
+        <p ally-id="a11y-4">These sections use CSS to look like headings, but are marked up as generic text, hiding the page structure from screen readers.</p>
 
         <span class="fake-heading" ally-id="a11y-5">Missing Heading 1: Introduction to Concepts</span>
-        <p ally-id="a11y-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.</p>
+        <p ally-id="a11y-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <span class="fake-heading" ally-id="a11y-7">Missing Heading 2: Data Abstraction Layer</span>
-        <p ally-id="a11y-8">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <p ally-id="a11y-8">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <span class="fake-heading" ally-id="a11y-9">Missing Heading 3: User Interface Components</span>
         <p ally-id="a11y-10">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <span class="fake-heading" ally-id="a11y-11">Missing Heading 4: Server-Side Processing</span>
-        <p ally-id="a11y-12">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p>
+        <p ally-id="a11y-12">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <span class="fake-heading" ally-id="a11y-13">Missing Heading 5: Database Connection Pooling</span>
         <p ally-id="a11y-14">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
         <span class="fake-heading" ally-id="a11y-15">Missing Heading 6: Asynchronous Operations</span>
         <p ally-id="a11y-16">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
         <span class="fake-heading" ally-id="a11y-17">Missing Heading 7: Frontend Framework Selection</span>
-        <p ally-id="a11y-18">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo.</p>
+        <p ally-id="a11y-18">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         <span class="fake-heading" ally-id="a11y-19">Missing Heading 8: Backend API Design</span>
-        <p ally-id="a11y-20">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-            dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p ally-id="a11y-20">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         <span class="fake-heading" ally-id="a11y-21">Missing Heading 9: Security Protocols Review</span>
         <p ally-id="a11y-22">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <span class="fake-heading" ally-id="a11y-23">Missing Heading 10: Performance Optimization Checklist</span>
@@ -93,18 +65,15 @@
         <p class="fake-heading" ally-id="a11y-25">Missing Heading 11: Deployment Strategy</p>
         <p ally-id="a11y-26">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <p class="fake-heading" ally-id="a11y-27">Missing Heading 12: Continuous Integration</p>
-        <p ally-id="a11y-28">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p>
+        <p ally-id="a11y-28">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="fake-heading" ally-id="a11y-29">Missing Heading 13: Project Documentation</p>
         <p ally-id="a11y-30">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
         <p class="fake-heading" ally-id="a11y-31">Missing Heading 14: Client Requirements Analysis</p>
         <p ally-id="a11y-32">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
         <p class="fake-heading" ally-id="a11y-33">Missing Heading 15: Wireframing and Prototyping</p>
-        <p ally-id="a11y-34">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo.</p>
+        <p ally-id="a11y-34">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         <p class="fake-heading" ally-id="a11y-35">Missing Heading 16: Initial Code Structure</p>
-        <p ally-id="a11y-36">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-            dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p ally-id="a11y-36">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         <p class="fake-heading" ally-id="a11y-37">Missing Heading 17: Module Dependencies</p>
         <p ally-id="a11y-38">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <p class="fake-heading" ally-id="a11y-39">Missing Heading 18: Error Handling Implementation</p>
@@ -112,19 +81,16 @@
         <p class="fake-heading" ally-id="a11y-41">Missing Heading 19: Third-Party Integrations</p>
         <p ally-id="a11y-42">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <p class="fake-heading" ally-id="a11y-43">Missing Heading 20: Unit Testing Coverage</p>
-        <p ally-id="a11y-44">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p>
+        <p ally-id="a11y-44">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         <p class="fake-heading" ally-id="a11y-45">Missing Heading 21: Accessibility Audit Planning</p>
         <p ally-id="a11y-46">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
         <p class="fake-heading" ally-id="a11y-47">Missing Heading 22: Content Management System Setup</p>
         <p ally-id="a11y-48">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
         <p class="fake-heading" ally-id="a11y-49">Missing Heading 23: Data Migration Process</p>
-        <p ally-id="a11y-50">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo.</p>
+        <p ally-id="a11y-50">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         <p class="fake-heading" ally-id="a11y-51">Missing Heading 24: Cloud Hosting Environment</p>
-        <p ally-id="a11y-52">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-            dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p ally-id="a11y-52">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         <p class="fake-heading" ally-id="a11y-53">Missing Heading 25: Load Balancing Strategies</p>
         <p ally-id="a11y-54">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <p class="fake-heading" ally-id="a11y-55">Missing Heading 26: Firewall Configuration</p>
@@ -132,8 +98,7 @@
         <p class="fake-heading" ally-id="a11y-57">Missing Heading 27: Disaster Recovery Plan</p>
         <p ally-id="a11y-58">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <p class="fake-heading" ally-id="a11y-59">Missing Heading 28: Monitoring and Alerting</p>
-        <p ally-id="a11y-60">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p>
+        <p ally-id="a11y-60">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p class="fake-heading" ally-id="a11y-61">Missing Heading 29: Maintenance Window Scheduling</p>
         <p ally-id="a11y-62">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
         <p class="fake-heading" ally-id="a11y-63">Missing Heading 30: Final Review and Launch</p>
@@ -145,8 +110,8 @@
 
         <h2 ally-id="a11y-68">Invalid Section 1: Introduction</h2>
         <p ally-id="a11y-69">Content for the main introduction.</p>
-
-        <h4 ally-id="a11y-70">Invalid Heading 1: The Deep Dive</h4>
+        
+        <h4 ally-id="a11y-70">Invalid Heading 1: The Deep Dive</h4> 
         <p ally-id="a11y-71">Detailed content that should have been under an H3.</p>
 
         <h6 ally-id="a11y-72">Invalid Heading 2: A Minor Sub-point</h6>
@@ -154,7 +119,7 @@
 
         <h2 ally-id="a11y-74">Invalid Section 2: Methodology</h2>
         <p ally-id="a11y-75">Content on the methodology used.</p>
-
+        
         <h4 ally-id="a11y-76">Invalid Heading 3: Phase One Execution</h4>
         <p ally-id="a11y-77">Details on the first phase.</p>
 
@@ -166,7 +131,7 @@
 
         <h2 ally-id="a11y-82">Invalid Section 3: Results Overview</h2>
         <p ally-id="a11y-83">Summary of the main findings.</p>
-
+        
         <h4 ally-id="a11y-84">Invalid Heading 6: Key Finding A</h4>
         <p ally-id="a11y-85">Content for Key Finding A.</p>
 
@@ -175,7 +140,7 @@
 
         <h2 ally-id="a11y-88">Invalid Section 4: Discussion and Analysis</h2>
         <p ally-id="a11y-89">Analysis of the results.</p>
-
+        
         <h4 ally-id="a11y-90">Invalid Heading 8: Implications for Future Work</h4>
         <p ally-id="a11y-91">Future work content.</p>
 
@@ -184,13 +149,13 @@
 
         <h2 ally-id="a11y-94">Invalid Section 5: Conclusion Summary</h2>
         <p ally-id="a11y-95">Final summary.</p>
-
+        
         <h4 ally-id="a11y-96">Invalid Heading 10: Final Thoughts</h4>
         <p ally-id="a11y-97">Closing remarks.</p>
 
         <h2 ally-id="a11y-98">Invalid Section 6: Additional Resources</h2>
         <p ally-id="a11y-99">Content about resources.</p>
-
+        
         <h4 ally-id="a11y-100">Invalid Heading 11: Tooling References</h4>
         <p ally-id="a11y-101">Tooling details.</p>
 
@@ -202,7 +167,7 @@
 
         <h2 ally-id="a11y-106">Invalid Section 7: Appendix Data</h2>
         <p ally-id="a11y-107">Content for the appendix.</p>
-
+        
         <h4 ally-id="a11y-108">Invalid Heading 14: Raw Data Tables</h4>
         <p ally-id="a11y-109">Raw data details.</p>
 
@@ -211,7 +176,7 @@
 
         <h2 ally-id="a11y-112">Invalid Section 8: Glossary of Terms</h2>
         <p ally-id="a11y-113">Definitions section.</p>
-
+        
         <h4 ally-id="a11y-114">Invalid Heading 16: Technical Jargon</h4>
         <p ally-id="a11y-115">Jargon definitions.</p>
 
@@ -223,90 +188,11 @@
 
         <h2 ally-id="a11y-120">Invalid Section 9: Feedback and Contact</h2>
         <p ally-id="a11y-121">Contact information.</p>
-
+        
         <h4 ally-id="a11y-122">Invalid Heading 19: Contact Form Information</h4>
         <p ally-id="a11y-123">Form details.</p>
 
         <h6 ally-id="a11y-124">Invalid Heading 20: Submission Guidelines</h6>
         <p ally-id="a11y-125">Submission rules.</p>
-
-        <hr ally-id="a11y-126">
-
-        <h2 ally-id="a11y-127">Part III: Edge Cases and Valid Scenarios (Should NOT trigger violations)</h2>
-        <p ally-id="a11y-128">These sections test edge cases where violations should NOT be caught.</p>
-
-        <h3 ally-id="a11y-129">✅ Valid: Proper Heading Hierarchy</h3>
-        <p ally-id="a11y-130">This section has correct H2 → H3 progression.</p>
-
-        <h4 ally-id="a11y-131">✅ Valid: Correct H4 under H3</h4>
-        <p ally-id="a11y-132">This H4 correctly follows an H3 parent.</p>
-
-        <h3 ally-id="a11y-133">✅ Valid: Hidden/Aria-Hidden Elements</h3>
-        <div style="display: none;" ally-id="a11y-134">
-            <span class="fake-heading" ally-id="a11y-135">Hidden Fake Heading (Should be ignored)</span>
         </div>
-        <div aria-hidden="true" ally-id="a11y-136">
-            <h5 ally-id="a11y-137">Aria-Hidden H5 (Should be ignored)</h5>
-        </div>
-
-        <h3 ally-id="a11y-138">✅ Valid: Empty Headings for Icons</h3>
-        <h4 ally-id="a11y-139"><span aria-label="Settings" ally-id="a11y-140">⚙️</span></h4>
-        <p ally-id="a11y-141">Icon-only heading with proper aria-label.</p>
-
-        <h3 ally-id="a11y-142">✅ Valid: Headings in Navigation</h3>
-        <nav ally-id="a11y-143">
-            <h2 ally-id="a11y-144">Navigation Menu</h2>
-            <ul ally-id="a11y-145">
-                <li ally-id="a11y-146"><a href="#" ally-id="a11y-147">Home</a></li>
-                <li ally-id="a11y-148"><a href="#" ally-id="a11y-149">About</a></li>
-            </ul>
-        </nav>
-
-        <h3 ally-id="a11y-150">✅ Valid: Headings in Aside/Sidebar</h3>
-        <aside ally-id="a11y-151">
-            <h2 ally-id="a11y-152">Related Content</h2>
-            <p ally-id="a11y-153">Sidebar content that won't break main outline.</p>
-        </aside>
-
-        <h3 ally-id="a11y-154">✅ Valid: Multiple H1s in Sections (HTML5)</h3>
-        <article ally-id="a11y-155">
-            <h1 ally-id="a11y-156">Article Title</h1>
-            <p ally-id="a11y-157">Article content.</p>
-        </article>
-        <article ally-id="a11y-158">
-            <h1 ally-id="a11y-159">Another Article Title</h1>
-            <p ally-id="a11y-160">More article content.</p>
-        </article>
-
-        <h3 ally-id="a11y-161">✅ Valid: Headings with Accessibility Enhancements</h3>
-        <h4 id="accessible-heading" tabindex="-1" ally-id="a11y-162">Accessible Heading with ID</h4>
-        <p ally-id="a11y-163">Heading with proper ARIA attributes and skip navigation support.</p>
-
-        <h3 ally-id="a11y-164">✅ Valid: Heading Inside Button (Edge Case)</h3>
-        <button ally-id="a11y-165">
-            <span class="fake-heading" role="presentation" ally-id="a11y-166">Click Me</span>
-        </button>
-        <p ally-id="a11y-167">Styled text in a button with proper role.</p>
-
-        <h3 ally-id="a11y-168">✅ Valid: Decorative Text with Role None</h3>
-        <div class="fake-heading" role="none" ally-id="a11y-169">
-            Decorative Large Text
-        </div>
-        <p ally-id="a11y-170">Explicitly marked as decorative with role="none".</p>
-
-        <h3 ally-id="a11y-171">✅ Valid: Programmatically Hidden (Visibility)</h3>
-        <div style="visibility: hidden;" ally-id="a11y-172">
-            <span class="fake-heading" ally-id="a11y-173">Invisible Fake Heading</span>
-        </div>
-        <div style="opacity: 0;" ally-id="a11y-174">
-            <h5 ally-id="a11y-175">Transparent H5 (Should be ignored)</h5>
-        </div>
-
-        <h3 ally-id="a11y-176">✅ Valid: Off-Screen Content</h3>
-        <div style="position: absolute; left: -9999px;" ally-id="a11y-177">
-            <span class="fake-heading" ally-id="a11y-178">Off-screen Fake Heading</span>
-        </div>
-        <p ally-id="a11y-179">Content positioned off-screen for screen readers only.</p>
-    </div>
-
 </body></html>
