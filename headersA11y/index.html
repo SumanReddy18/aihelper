@@ -1,0 +1,618 @@
+<html><head>
+    <title>
+        All rules website
+    </title>
+    <style>
+        a {
+            outline-color: transparent;
+            text-decoration: none;
+            padding: 2px 1px 0;
+        }
+
+        .focus-order-broken a {
+            margin-left: 0.75em;
+        }
+
+        .focus-order-broken .first,
+        .focus-order-broken .third {
+            float: left;
+        }
+
+        .focus-order-broken .second {
+            float: right;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        #carousel-example-generic {
+            display: block;
+            float: center;
+            width: 25%;
+            height: 25%;
+        }
+
+        .carousel-control {
+            width: 5% !important;
+        }
+
+        .carousel-control .icon-next {
+            right: 50% !important;
+        }
+
+        .carousel-control .icon-prev {
+            left: 50% !important;
+        }
+
+        .carousel-control .icon-next,
+        .carousel-control .icon-prev {
+            top: 46% !important;
+            color: #000 !important;
+            font-size: 34px !important;
+
+        }
+
+        .carousel-control .glyphicon-chevron-left,
+        .carousel-control .glyphicon-chevron-right,
+        .carousel-control .icon-prev,
+        .carousel-control .icon-next {
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        .previous {
+            background-color: #f1f1f1;
+            color: black;
+            left: 20%;
+        }
+
+        .previous,
+        .next {
+            position: absolute;
+        }
+
+        .next:hover,
+        .previous:hover {
+            color: black;
+        }
+
+        .next {
+            background-color: #f1f1f1;
+            color: white;
+            right: 20%;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+        .fake-heading-example {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0.67em 0;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: -999;
+        }
+
+        .skip-link:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid blue;
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+            text-decoration: underline;
+            z-index: 999;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta http-equiv="refresh" content="80000">
+</head>
+
+<body>
+    <!-- bypass-blocks-skip-links-->
+    <a href="#main" class="skip-link" ally-id="a11y-1">Skip to main content</a>
+    <main id="main" ally-id="a11y-2">
+        <br ally-id="a11y-3"><br ally-id="a11y-4">
+
+        <nav class="navbar navbar-default fixed-bottom navbar-dark" ally-id="a11y-5">
+            <div class="container-fluid" ally-id="a11y-6">
+                <div class="navbar-header" ally-id="a11y-7">
+                    <a class="navbar-brand" href="/a11y" ally-id="a11y-8">A11y</a>
+                </div>
+                <ul class="nav navbar-nav" ally-id="a11y-9">
+                    <li class="active" ally-id="a11y-10"><a href="/top" ally-id="a11y-11">Top</a></li>
+                    <li ally-id="a11y-12"><a href="/twitter" ally-id="a11y-13">Twitter</a></li>
+                    <li ally-id="a11y-14"><a href="/youtube" ally-id="a11y-15">YouTube</a></li>
+                    <li ally-id="a11y-16"><a href="/instagram" ally-id="a11y-17">Instagram</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br ally-id="a11y-18">
+
+        <!-- menu-landmark violation code -->
+        <div class="menu" ally-id="a11y-19">
+            <a href="#" ally-id="a11y-20">Logo</a>
+            <a href="/menu1" style="position: absolute; right: 0" ally-id="a11y-21"> Item1 </a>
+            <!-- role-required-menu needs review violation code added with onclick event, this also raises keyboard-menu needs review violation code -->
+            <div class="menu-class" ally-id="a11y-22">
+                <div class="menu-item" onclick="openNewTab()" style="position: absolute; right: 0" ally-id="a11y-23">Item2</div>
+            </div>
+        </div>
+        <br ally-id="a11y-24">
+        <!-- No Visible Label Violation-->
+        <div ally-id="a11y-25">
+            <input type="text" aria-label="Enter your username" style="width: 200px; height: 30px; border: 1px solid red; margin-bottom: 10px;" ally-id="a11y-26">
+        </div>
+
+        <div ally-id="a11y-27">
+            <input type="email" title="Your email address" style="width: 200px; height: 30px; border: 1px solid orange; margin-bottom: 10px;" ally-id="a11y-28">
+        </div>
+        <!-- search-landmark violation code -->
+        <div class="SearchInputForm" style="position: absolute; right: 0" ally-id="a11y-29">
+            <input id="search-input" type="text" placeholder="Search this page" ally-id="a11y-30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" tabindex="-1" ally-id="a11y-31">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" ally-id="a11y-32"></path>
+            </svg>
+        </div>
+        <br ally-id="a11y-33">
+        <br ally-id="a11y-34">
+        <nav class="navbar navbar-default" ally-id="a11y-35">
+            <div class="container-fluid" ally-id="a11y-36">
+                <div class="navbar-header" ally-id="a11y-37">
+                    <a class="navbar-brand" href="#website" ally-id="a11y-38">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav" ally-id="a11y-39">
+                    <li class="dropdown active" ally-id="a11y-40">
+                        <!-- menu-popup and menu-expand violation code -->
+                        <a class="btn dropdown-toggle" href="#home" data-toggle="dropdown" id="dropdownMenuLink" ally-id="a11y-41"> Home
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" ally-id="a11y-42">
+                            <ul class="nav" ally-id="a11y-43">
+                                <li class="dropdown-item" ally-id="a11y-44"><a href="#" ally-id="a11y-45">Link 1</a></li>
+                                <li class="dropdown-item" ally-id="a11y-46"><a href="#" ally-id="a11y-47">Link 2</a></li>
+                                <li class="dropdown-item" ally-id="a11y-48"><a href="#" ally-id="a11y-49">Link 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li ally-id="a11y-50"><a href="#page4" ally-id="a11y-51">Page 4</a></li>
+                    <li ally-id="a11y-52"><a href="#page3" ally-id="a11y-53">Page 3</a></li>
+                    <li ally-id="a11y-54"><a href="#page2" ally-id="a11y-55">Page 2</a></li>
+                    <li ally-id="a11y-56"><a href="https://www.google.com/example" ally-id="a11y-57">Any page</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- breadcrumb-landmark rule-->
+        <ul class="breadcrumb" ally-id="a11y-58">
+            <li ally-id="a11y-59"><a href="https://browserstack.github.io/bs-a11y-checks/all/index.html" ally-id="a11y-60">Home</a></li>
+            <li ally-id="a11y-61"><a href="https://browserstack.github.io/bs-a11y-checks/all/typec.html" ally-id="a11y-62">A11y</a></li>
+            <li ally-id="a11y-63"><a href="https://browserstack.github.io/bs-a11y-checks/typeB/cl.html" ally-id="a11y-64">WCAG</a></li>
+            <li class="active" ally-id="a11y-65">main</li>
+        </ul>
+
+
+        <!-- breadcrumb-label and breadcrumb-aria-current rule-->
+        <nav ally-id="a11y-66">
+            <ul class="breadcrumb" ally-id="a11y-67">
+                <li ally-id="a11y-68"><a href="https://browserstack.github.io/bs-a11y-checks/all/index.html" ally-id="a11y-69">Bread-crumb</a></li>
+                <li ally-id="a11y-70"><a href="https://browserstack.github.io/bs-a11y-checks/all/index.html" ally-id="a11y-71">Home</a></li>
+                <li ally-id="a11y-72"><span ally-id="a11y-73">current page</span></li>
+            </ul>
+        </nav>
+
+
+        <!-- pause-moving-content violation examples -->
+        <h2 ally-id="a11y-74">Pause Moving Content Violations</h2>
+        <style>
+            .pause-violations-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .pause-violation {
+                flex: 1;
+                min-width: 320px;
+                border: 1px solid #ddd;
+                padding: 15px;
+            }
+        </style>
+        <div class="pause-violations-container" ally-id="a11y-75">
+            <!-- Video without controls -->
+            <div class="pause-violation" ally-id="a11y-76">
+                <h3 ally-id="a11y-77">Video Without Controls</h3>
+                <video autoplay="" loop="" muted="" playsinline="" width="100%" style="max-width:320px; background: #000;" ally-id="a11y-78">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" ally-id="a11y-79">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" ally-id="a11y-80">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <!-- Auto-advancing carousel -->
+            <div class="pause-violation" ally-id="a11y-81">
+                <h3 ally-id="a11y-82">Auto-advancing Carousel</h3>
+                <div id="autoCarousel" style="width:320px; height:180px; overflow:hidden; position:relative;" ally-id="a11y-83">
+                    <div id="autoCarouselInner" style="display:flex; transition:transform 0.5s;" ally-id="a11y-84">
+                        <img src="../img/Blog-bstack@2x.png" style="min-width:100%; height:180px; object-fit:cover;" ally-id="a11y-85">
+                        <img src="../img/Blog-bstack@2x.png" style="min-width:100%; height:180px; object-fit:cover;" ally-id="a11y-86">
+                        <img src="../img/Blog-bstack@2x.png" style="min-width:100%; height:180px; object-fit:cover;" ally-id="a11y-87">
+                    </div>
+                </div>
+            </div>
+            <!-- Scrolling marquee without pause -->
+            <div class="pause-violation" ally-id="a11y-88">
+                <h3 ally-id="a11y-89">Auto-scrolling Content</h3>
+                <marquee ally-id="a11y-90">
+                    This is continuously scrolling text that cannot be paused or stopped, which violates WCAG
+                    guidelines.
+                </marquee>
+            </div>
+        </div>
+        <h2 ally-id="a11y-91">The fieldset element</h2>
+        <form action="/action_page.php" ally-id="a11y-92">
+            <fieldset ally-id="a11y-93">
+                <input type="radio" id="html" name="fav_language" value="HTML" ally-id="a11y-94">
+                <label ally-id="a11y-95">HTML</label><br ally-id="a11y-96">
+                <input type="radio" id="css" name="fav_language" value="CSS" ally-id="a11y-97">
+                <label for="css" ally-id="a11y-98">CSS</label><br ally-id="a11y-99">
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript" ally-id="a11y-100">
+                <label for="javascript" ally-id="a11y-101">JS</label><br ally-id="a11y-102">
+                <input type="submit" value="Submit" ally-id="a11y-103">
+            </fieldset>
+        </form>
+        <h1 ally-id="a11y-104">fieldset required section</h1>
+        <form action="/action1_page.php" ally-id="a11y-105">
+            <input type="radio" id="py" name="fav_language" value="Python" ally-id="a11y-106">
+            <input type="radio" id="java" name="fav_language" value="Java" ally-id="a11y-107">
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript" ally-id="a11y-108">
+            <input type="radio" id="vanillajs" name="fav_language" value="VanillaJS" ally-id="a11y-109">
+            <label ally-id="a11y-110"></label>
+        </form>
+        OneTwoThree<table ally-id="a11y-111">
+            <tbody ally-id="a11y-112"><tr ally-id="a11y-113"></tr>
+            <tr ally-id="a11y-114"></tr>
+            <tr ally-id="a11y-115"></tr>
+        </tbody></table>
+        <nav class="navbar navbar-default fixed-bottom navbar-dark" ally-id="a11y-116">
+            <div class="container-fluid" ally-id="a11y-117">
+                <div class="navbar-header" ally-id="a11y-118">
+                    <a class="navbar-brand" href="#a11y" ally-id="a11y-119">A11y</a>
+                </div>
+                <ul class="nav navbar-nav" ally-id="a11y-120">
+                    <li class="active" ally-id="a11y-121"><a href="#top" ally-id="a11y-122">Top</a></li>
+                    <li ally-id="a11y-123"><a href="#twitter" ally-id="a11y-124">Twitter</a></li>
+                    <li ally-id="a11y-125"><a href="#youtube" ally-id="a11y-126">YouTube</a></li>
+                    <li ally-id="a11y-127"><a href="#instagram" ally-id="a11y-128">Instagram</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br ally-id="a11y-129">
+        <div ally-id="a11y-130">
+            <label for="disk_d" ally-id="a11y-131"></label>
+
+
+            <label id="disk_d" ally-id="a11y-132"></label>
+            <input type="radio" aria-labelledby="Python" ally-id="a11y-133">
+
+
+            <meter id="disk_d" value="0.6" ally-id="a11y-134">60%</meter>
+            <br ally-id="a11y-135">
+            <br ally-id="a11y-136">
+            <label for="output" ally-id="a11y-137">output</label>
+            <label for="a" ally-id="a11y-138">input</label>
+            <input type="range" id="a" value="50" ally-id="a11y-139">
+            <label for="b" ally-id="a11y-140">input</label>
+            +<input type="number" id="b" value="25" ally-id="a11y-141">
+            =<output name="x" for="a b" ally-id="a11y-142"></output>
+            <br ally-id="a11y-143">
+            <br ally-id="a11y-144">
+            <label for="file" ally-id="a11y-145"></label>
+            <progress id="file" value="32" max="100" ally-id="a11y-146"> 32% </progress>
+            <br ally-id="a11y-147">
+            <br ally-id="a11y-148">
+        </div>
+
+        <div class="item item1 row-1" ally-id="a11y-149">
+            <h3 ally-id="a11y-150">Link with different style span</h3>
+            <p ally-id="a11y-151">
+                <span ally-id="a11y-152">This </span>is a paragraph
+                <span ally-id="a11y-153">Span before</span>
+                <a href="#" ally-id="a11y-154">
+                    link
+                </a>
+                <span ally-id="a11y-155"> text to right </span>
+            </p>
+        </div>
+
+        <div class="focus-order-broken" ally-id="a11y-156">
+            <a class="first" href="#" tabindex="3" ally-id="a11y-157">First link</a><br ally-id="a11y-158">
+            <a class="second" href="#" tabindex="2" ally-id="a11y-159">Second link</a><br ally-id="a11y-160">
+            <a class="Third" href="#" tabindex="1" ally-id="a11y-161">Third link</a><br ally-id="a11y-162">
+        </div>
+
+        <br ally-id="a11y-163">
+        <a href="/read" ally-id="a11y-164">Learn more</a>
+
+
+        <div ally-id="a11y-165">
+            aria-braille-equivalent
+            <button aria-braillelabel="tush" ally-id="a11y-166">DJ</button>
+            <br ally-id="a11y-167"><br ally-id="a11y-168"><br ally-id="a11y-169">
+        </div>
+
+
+        <div ally-id="a11y-170">
+            aria-conditional-attr
+            <input type="checkbox" aria-checked="true" ally-id="a11y-171">gggh
+            <br ally-id="a11y-172"><br ally-id="a11y-173"><br ally-id="a11y-174">
+        </div>
+
+
+        <div ally-id="a11y-175">
+            aria-deprecated-role
+            <div role="directory" ally-id="a11y-176"></div>
+            <br ally-id="a11y-177"><br ally-id="a11y-178"><br ally-id="a11y-179">
+        </div>
+
+        <div ally-id="a11y-180">
+            aria-prohibited-attr
+            <div aria-label="1 out of 3" ally-id="a11y-181"></div><br ally-id="a11y-182"><br ally-id="a11y-183"><br ally-id="a11y-184">
+        </div>
+
+        <div ally-id="a11y-185">
+            frame-title-unique
+            <iframe title="BS" ally-id="a11y-186">ab</iframe>
+            <iframe title="BS" ally-id="a11y-187">aa</iframe>
+            <br ally-id="a11y-188"><br ally-id="a11y-189"><br ally-id="a11y-190">
+        </div>
+
+
+        <div ally-id="a11y-191">
+            no-autoplay-audio
+            <!-- <audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+              Your browser does not support the audio element.
+            </audio> -->
+            <!-- <audio controls> 
+                <source src= 
+        "https://media.geeksforgeeks.org/wp-content/uploads/20230524142525/gfg_offline_classes_en.mp3"
+                        type="audio/mp3"> 
+                <source src= 
+        "https://media.geeksforgeeks.org/wp-content/uploads/20220913101124/audiosample.ogg"
+                        type="audio/mp3"> 
+            </audio>  -->
+            <br ally-id="a11y-192"><br ally-id="a11y-193"><br ally-id="a11y-194">
+        </div>
+
+
+        <div ally-id="a11y-195">
+            empty-table-header
+            Empty row header<table ally-id="a11y-196">
+                <tbody ally-id="a11y-197"><tr ally-id="a11y-198"><th ally-id="a11y-199">
+                </th><th ally-id="a11y-200">
+                    </th></tr><tr ally-id="a11y-201"></tr>
+            </tbody></table><br ally-id="a11y-202"><br ally-id="a11y-203"><br ally-id="a11y-204">
+        </div>
+
+
+        <h3 ally-id="a11y-205">REMOVED RULES</h3>
+        <div ally-id="a11y-206">
+            aria-roledescription
+            <p aria-roledescription="my paragraph" id="fail1" ally-id="a11y-207">paragraph</p>
+            <br ally-id="a11y-208"><br ally-id="a11y-209"><br ally-id="a11y-210">
+        </div>
+
+        <div ally-id="a11y-211">
+            audio-caption
+            <audio ally-id="a11y-212">
+                <source ally-id="a11y-213">
+            </audio>
+            <br ally-id="a11y-214"><br ally-id="a11y-215"><br ally-id="a11y-216">
+        </div>
+
+        <div ally-id="a11y-217">
+            duplicate-id
+            <p id="abc" class="abc" ally-id="a11y-218">Lorem ipsum with some text.</p>
+            <div style="display: none;" ally-id="a11y-219">
+                <p id="abc" ally-id="a11y-220">some paragraph text with another para text.</p>
+            </div>
+            <br ally-id="a11y-221"><br ally-id="a11y-222"><br ally-id="a11y-223">
+        </div>
+
+
+        <h2 ally-id="a11y-224">Non Ally Engine Experimental Rules</h2>
+        <div ally-id="a11y-225">
+            p-as-heading
+            <p ally-id="a11y-226"><b ally-id="a11y-227"><i ally-id="a11y-228">Para heading</i></b></p>
+            <p ally-id="a11y-229">A paragraph, A paragraph!</p>
+        </div>
+
+
+        <div ally-id="a11y-230">
+            label-content-name-mismatch
+            <div role="link" aria-label="XYZ" ally-id="a11y-231">ABCD</div>
+            <br ally-id="a11y-232"><br ally-id="a11y-233"><br ally-id="a11y-234">
+        </div>
+
+        <div ally-id="a11y-235">
+            td-has-header
+            <table ally-id="a11y-236">
+                <tbody ally-id="a11y-237"><tr ally-id="a11y-238">
+                    <td ally-id="a11y-239">td1</td>
+                    <td ally-id="a11y-240">td2</td>
+                    <td ally-id="a11y-241">td3</td>
+                    <td ally-id="a11y-242">td4</td>
+                </tr>
+                <tr ally-id="a11y-243">
+                    <td ally-id="a11y-244">td1</td>
+                    <td ally-id="a11y-245">td2</td>
+                    <td ally-id="a11y-246">td3</td>
+                    <td ally-id="a11y-247">td4</td>
+                </tr>
+                <tr ally-id="a11y-248">
+                    <td ally-id="a11y-249">td1</td>
+                    <td ally-id="a11y-250">td2</td>
+                    <td ally-id="a11y-251">td3</td>
+                    <td ally-id="a11y-252">td4</td>
+                </tr>
+            </tbody></table>
+            <br ally-id="a11y-253"><br ally-id="a11y-254"><br ally-id="a11y-255">
+        </div>
+
+        <img src="../img/chatgpt.png" ally-id="a11y-256">
+        <br ally-id="a11y-257"><br ally-id="a11y-258">
+        <iframe src="../iframes/iframe.html" ally-id="a11y-259">
+        </iframe>
+        <br ally-id="a11y-260"><br ally-id="a11y-261">
+        <img src="../img/a11yicon.png" alt="Image" width="180" height="180" ally-id="a11y-262">
+        <br ally-id="a11y-263"><br ally-id="a11y-264">
+        <!-- Show-password rule violation -->
+        Email: <input type="text" placeholder="Enter your email here" id="myEmail" ally-id="a11y-265"><br ally-id="a11y-266"><br ally-id="a11y-267">
+        Password: <input type="password" value="abcd" id="myPassword" ally-id="a11y-268"><br ally-id="a11y-269"><br ally-id="a11y-270">
+
+        <!-- Cognitive-captcha and cognitive-captcha-enhanced rule violation -->
+        Captcha to raise violation
+
+        <!-- accessible-name, role-required, keyboard-interactive violation code -->
+        <div class="name" ally-id="a11y-271">
+            <div class="access" onclick="openNewTab()" ally-id="a11y-272">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none" ally-id="a11y-273">
+                    <path d="M13.5 6.75L6.75 13.5L13.5 20.25" stroke="#5751F9" stroke-width="1.25" ally-id="a11y-274"></path>
+                    <path d="M20.25 13.5L6.75 13.5" stroke="#5751F9" stroke-width="1.25" ally-id="a11y-275"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- accessible-name-carousel,role-required-carousel, keyboard-interactive violation code-->
+        <div class="slider" ally-id="a11y-276">
+            <div class="slick-prev" onclick="openNewTab()" ally-id="a11y-277">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none" ally-id="a11y-278">
+                    <path d="M13.5 6.75L6.75 13.5L13.5 20.25" stroke="#5751F9" stroke-width="1.25" ally-id="a11y-279"></path>
+                    <path d="M20.25 13.5L6.75 13.5" stroke="#5751F9" stroke-width="1.25" ally-id="a11y-280"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- aria-expandable-region violation code-->
+        <div class="panel panel-default" ally-id="a11y-281">
+            <div class="panel-heading" id="collapseListGroupHeading1" ally-id="a11y-282">
+                <h4 class="panel-title" ally-id="a11y-283">
+                    <a role="button" data-toggle="collapse" href="#collapseListGroup1" ally-id="a11y-284">
+                        Accordion
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseListGroup1" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1" ally-id="a11y-285">
+                <ul class="list-group" ally-id="a11y-286">
+                    <li class="list-group-item" ally-id="a11y-287">List 1</li>
+                    <li class="list-group-item" ally-id="a11y-288">List 2</li>
+                    <li class="list-group-item" ally-id="a11y-289">List 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" ally-id="a11y-290">
+            <div id="myCarousel" class="carousel carousel-fade" ally-id="a11y-291">
+
+                <!-- Indicator for Slides -->
+                <ol class="carousel-indicators" ally-id="a11y-292">
+                    <li data-target="#myCarousel" data-slide-to="0" class="" ally-id="a11y-293"></li>
+                    <li data-target="#myCarousel" data-slide-to="1" class="" ally-id="a11y-294"></li>
+                </ol>
+                <!-- Indicator for Slides -->
+
+                <!-- Wrapper for Slides -->
+                <div class="carousel-inner" ally-id="a11y-295">
+                    <div class="item active" ally-id="a11y-296">
+                        <div class="fill" ally-id="a11y-297">
+                            <img title="A11y icon" alt="A11y icon for png" src="../img/a11yicon.png" ally-id="a11y-298">
+                        </div>
+                    </div>
+                    <div class="item" ally-id="a11y-299">
+                        <div class="fill" ally-id="a11y-300">
+                            <a href="#img" target="_blank" rel="noopener noreferrer" ally-id="a11y-301">
+                                <img src="../img/chatgpt.png" title="chatgp definition image" alt="chatgp definition image" ally-id="a11y-302">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev" title="previous" aria-label="Carousel Previous Button" ally-id="a11y-303">
+                    <span class="icon-prev previous round" ally-id="a11y-304"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next" title="next" aria-label="Carousel Next Button" ally-id="a11y-305">
+                    <span class="icon-next next round" ally-id="a11y-306"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- missing-heading rule violation code-->
+        <div class="fakeHeadingExample" ally-id="a11y-307">
+            <div class="fake-heading-example" ally-id="a11y-308">Fake Heading</div>
+            <p ally-id="a11y-309">This paragraph is preceded by a div that is styled to look like a heading</p>
+        </div>
+        <!-- invalid-heading rule violation code-->
+        <h6 ally-id="a11y-310">Invalid Heading 1: Next Steps Recommendations</h6>
+        <p ally-id="a11y-311">Recommendations content.</p>
+        <h6 ally-id="a11y-312">Invalid Heading 2: Next Steps Recommendations</h6>
+        <h6 ally-id="a11y-313">Invalid Heading 3: Primary Tool Set</h6>
+        <script>
+            function openNewTab() { }
+            // Auto-advancing carousel
+            let autoIdx = 0;
+            setInterval(() => {
+                autoIdx = (autoIdx + 1) % 3;
+                const carousel = document.getElementById('autoCarouselInner');
+                if (carousel) {
+                    carousel.style.transform = `translateX(-${100 * autoIdx}%)`;
+                }
+            }, 2000);
+        </script>
+
+        <!-- Audio Only Elements should have Script rule violation code-->
+        <!-- Violation Case -->
+        <audio controls="" ally-id="a11y-314">
+            <source src="https://player.simplecast.com/398813dd-62f2-413c-a230-95c137301a75?dark=false" type="audio/mp3" ally-id="a11y-315">
+        </audio>
+
+        <!-- Missing language attribute violation -->
+        <div lang="en" ally-id="a11y-316">
+            Este es un texto de ejemplo en español que no tiene el atributo de idioma correcto.
+        </div>
+
+        <!-- Unecessary list structure -->
+        <ul ally-id="a11y-317">
+            <li ally-id="a11y-318">A single, simple list item.</li>
+        </ul>
+
+    </main>
+
+    <div id="footer" class="footer" style="height: auto; text-align: center; padding: 40px;" ally-id="a11y-319">
+        <a href="#top" style="color: #0339fc" ally-id="a11y-320">Back to Top | </a>
+        <a href="#privacy" style="color: #0339fc" ally-id="a11y-321">Privacy | </a>
+        <a href="#terms" style="color: #0339fc" ally-id="a11y-322">Terms | </a>
+        <a href="#contact-us" style="color: #0339fc" ally-id="a11y-323">Contact Us</a>
+        <div class="copyright" ally-id="a11y-324"></div>
+        <p ally-id="a11y-325">© 2025 All rights reserved.</p>
+    </div>
+    
+
+
+</body></html>
